@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Stopwatch/Countdown Timer</title>
+        <link rel="stylesheet" type="text/css" href="./css/timers.css" />
+        <script type="text/javascript" src="./script/timers.js"></script>  
+    </head>
+    <body>
+        <div id="container">
+            <h1>Stopwatch/Countdown Timer</h1>
+            <div class="block">
+                <p id="time"><span id="timeFormat">00:00:00</span></p>
+                <p><span>Options:</span><span id="stopwatchOption">Stopwatch</span><span id="ctdwnTimerOption">Countdown Timer</span></p>
+                <hr />
+                <div id="stopwatchApp">
+                    <p><span id="startStopButton">Start</span><span id="resetButton">Reset</span></p>
+                </div>
+                <div id="ctdwnTimerApp">
+                    <p>Please enter time to count down in time format dd:dd:dd (minutes, seconds, hundredths). Minimum time to count down is 00:00:01 and maximum time to count down is 10:00:00, or 10 minutes. Clicking the "Pause" button will stop the time elapsed counter. Clicking the "Start" button will start or restart the countdown with the elapsed time beginning from 0 minutes, 0 seconds and 0 hundredths of a second.</p>
+                    <form action="" method="post" enctype="multipart/form-data" id="ctdwnTimerForm">
+                        <div id="innerBlock">
+                            <p id="inputField"><label for="userInput">Enter or Change Time:&nbsp;</label><input type="text" name="userInput" id="userInput" /><span id="prompt"></span></p>
+                        </div>
+                        <p><span id="startPauseButton">Start</span></p>
+                    </form>
+                    <p class="info">Time Elapsed:</p>
+                    <p id="timeElapsed">0 min 0 sec 0 hundredths of a sec has passed.</p>
+                </div>
+            </div>
+            <div class="block">
+                <p><span id="debugOnOff">Debug Mode is On</span><span id="clearOutput">Clear Debug Output</span></p>
+                <p class="info">Debug Output:</p>
+                <div id="debugOutput"></div>
+            </div>
+        </div>
+    </body>
+</html>
